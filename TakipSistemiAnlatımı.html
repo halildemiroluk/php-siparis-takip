@@ -1,0 +1,1011 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+	<meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE-edge">
+    <meta name="wiewport" content="width=device-width, inital-scale=1.0">
+    
+    <title>Sipariş Takip Sitesi Anlatım</title>
+<style>
+body{
+    background: #8e9eab;  /* fallback for old browsers */
+background: -webkit-linear-gradient(to right, #eef2f3, #8e9eab);  /* Chrome 10-25, Safari 5.1-6 */
+background: linear-gradient(to right, #eef2f3, #8e9eab); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+
+</style>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="#">SİPARİŞ TAKİP SİTESİ YAPIMI</a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarText">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="#"></a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#"></a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#"></a>
+              </li>
+            </ul>
+            <span class="navbar-text">
+              Halil İbrahim Demiroluk
+            </span>
+          </div>
+        </div>
+      </nav>
+
+    <p>.</p>
+
+    <div class="container my-2 p-3">
+        <p class="lead "> <h1>Takip Sistemi Nedir?</h1> </p>
+        <p>Sipariş ekleyip Sildiğimiz Ayriyeten Projelerimizi Ekleyip Sildiğimiz Sql' e veri gönderip Veri çeken Ve bu verileri Silebilen Girerken Sql deki kullanıcı bilgilerini isteyen günlük hayatımızda bize zaman kazandıran bir sistemdir. Bu anlatımda size bunu anlatıcağım. </p>
+    </div>
+    <div class="container my-2 p-3">
+        <p class="lead"> <h1>Gerekli Uygulamalar</h1> </p>
+        <p>Projeyi açmak için Xammp Yada WampServer indirmeniz gereklidir Projeye başlarken Az da olsa PHP Bootstrap ve JQuery bilmeniz gereklidir Projeyi Visual Studio Code ile yazabilirsiniz.
+            sql kullanıcı adı sabit:root sifre olmadan başlar.  Sitemize baktığımızda birçok şey kullanışlı bir şekilde vardır.ama vakit ayırıp projeyi geliştirebilirsiniz.
+        </p>
+    </div>
+<div class="card container my-2 p-3">
+        <div class="card-header">
+         Gerekli Kurulumlar
+        </div>
+    <div class="container container my-2 p-3">
+        <div class="row">
+            <div class="col-4">
+                    <div class="list-group" id="myTablist" role="tablist">
+                        <a href="#görünüm1-listesi"  class="list-group-item list-group-item-action active" id="görünüm1" 
+                        data-bs-toggle="list" role="tab" aria-controls="görünüm1-listesi">
+                            görünüm
+                        </a>
+                        <a href="#anlatım1-listesi"  class="list-group-item list-group-item-action" id="anlatım1" 
+                        data-bs-toggle="list" role="tab" aria-controls="anlatım1-listesi">
+                            Anlatım
+                        </a>
+                    </div>
+                    
+            </div>
+            <div class="col-8">
+                <div class="tab-content" id="tabcontent">
+                    <div class="tab-pane fade show active" id="görünüm1-listesi" role="tabpanel"
+                    aria-labelledby="görünüm1">
+                        <div class="card">
+                            <div class="card-body">
+                                <pre class="chroma"><code class="language-html" data-lang="html"><span class="p">&lt;</span><span class="nt">Xammp Kurulum Linki  https://www.apachefriends.org/tr/index.html </span> <span class="na"></span><span class="o"></span><span class="s"></span> <span class="na"></span><span class="o"></span><span class="s"></span> <span class="na"></span><span class="o"></span><span class="s"></span> <span class"na"></span><span class="o">=</span><span class="s"></span><span class="p">&gt;</span>
+                                    <span class="p">&lt;</span><span class="nt"></span> <span class="na"></span><span class="o"></span><span class="s"></span> <span class="na"></span><span class="o"></span><span class="s"></span> <span class="na"></span><span class="o"></span><span class="s"></span><span class="p">&gt;&lt;/</span><span class="nt"></span><span class="p">&gt;</span>
+                                    </code></pre>
+                                  <div class="highlight"><pre class="chroma"><code class="language-html" data-lang="html"><span class="p">&lt;</span><span class="nt">Sb Admin Tema Linki</span> <span class="na">src</span><span class="o">=</span><span class="s">"https://startbootstrap.com/theme/sb-admin-2"</span> <span class="na"></span><span class="o"></span><span class="s"></span> <span class="na"></span><span class="o"></span><span class="s"></span><span class="p">&gt;&lt;/</span><span class="nt"></span><span class="p">&gt;</span>
+                                    <span class="p">&lt;</span><span class="nt"></span> <span class="na"></span><span class="o"></span><span class="s"></span> <span class="na"></span><span class="o"></span><span class="s"></span> <span class="na"></span><span class="o"></span><span class="s"></span><span class="p">&gt;&lt;/</span><span class="nt"></span><span class="p">&gt;</span>
+                                    </code></pre></div>
+                            </div>
+                        </div>
+                    </div>    
+                   
+                    <div class="tab-pane fade show" id="anlatım1-listesi" role="tabpanel"
+                    aria-labelledby="anlatım1">
+                    Öncelikle Xammp sitesine girip kurulum için "Windows için XAMPP" kısmına basın ve ve indirin 
+                    Sb admin teması içinde free download kısmına basın ve indirin . Sb admin 2 yi indirdikten sonra bir kopyasını saklayın. ve sb admin dosyasının içine girin ve index.html hariç bütün json ve html dosyalarını silin. ve dosyaya sağ tıklayıp vs studio code ile açalım.
+                    </div>
+                        </div>
+                    </div> 
+                </div>
+			</div>
+        </div>
+    </div>
+</div> 
+<div class="card container my-2 p-3">
+        <div class="card-header">
+        Projeye Başlamak
+        </div>
+        <div class="container container my-2 p-3">
+            <div class="row">
+                <div class="col-4">
+                        <div class="list-group" id="myTablist" role="tablist">
+                            <a href="#görünüm2-listesi"  class="list-group-item list-group-item-action active" id="görünüm2" 
+                            data-bs-toggle="list" role="tab" aria-controls="görünüm2-listesi">
+                                Projeyi Bölelim
+                            </a>
+                            <a href="#kod2-listesi"  class="list-group-item list-group-item-action" id="kod2" 
+                            data-bs-toggle="list" role="tab" aria-controls="kod2-listesi">
+                                Aşamalar
+                            </a>
+                            
+                        </div>
+                        
+                </div>
+                <div class="col-8">
+                    <div class="tab-content" id="tabcontent">
+                        <div class="tab-pane fade show active" id="görünüm2-listesi" role="tabpanel"
+                        aria-labelledby="görünüm2">
+                            <div class="card" style="width: 18rem;">
+                               index.html'e girelim ve yorum satırlarında <--Begimn Page Content--> ve <! --/.Container.fluid ---> e kadar silelim bu bizim ana sayfadaki içeriğimiz biz içeriği kendimiz oluşturacağız.
+                            </div>   
+                        </div>    
+                        <div class="tab-pane fade show" id="kod2-listesi" role="tabpanel"
+                            aria-labelledby="kod2">
+                        footer.php ve header.php adlı iki dosya oluşturalım ve <--footer--> ın aşşağısını footer.php ye gerisini ise header.php dosyasına atın ve index.html dosyadsı boş kalsın.
+                        index.php dosyası oluşturup içine <br>
+                        <img src="https://imgyukle.com/f/2022/12/21/JGB9oq.png"/> ile header ve footer dosyalarını ekledik.
+
+                        </div> 
+                    </div>
+                    </div>
+                </div>
+            </div>
+        </div> 
+</div>
+<div class="card container my-2 p-3">
+        <div class="card-header">
+        Veri Tabanı Olışturma ve Ayarlar.php
+        </div>
+    <div class="container container my-2 p-3">
+        <div class="row">
+            <div class="col-4">
+               <div class="list-group" id="myTablist" role="tablist">
+                    <a href="#görünüm3-listesi"  class="list-group-item list-group-item-action active" id="görünüm3" 
+                    data-bs-toggle="list" role="tab" aria-controls="görünüm3-listesi">
+                        Veri Tabanı Oluşturma
+                    </a>
+                    
+                    <a href="#anlatım3-listesi"  class="list-group-item list-group-item-action" id="anlatım3" 
+                        data-bs-toggle="list" role="tab" aria-controls="anlatım3-listesi">
+                            Ayarlar.php_Oluşturma
+                        </a>
+                        <a href="#anlatım03-listesi"  class="list-group-item list-group-item-action" id="anlatım03" 
+                        data-bs-toggle="list" role="tab" aria-controls="anlatım03-listesi">
+                            Ayarlar veri tabanı bağlama
+                        </a>
+                        <a href="#anlatım033-listesi"  class="list-group-item list-group-item-action" id="anlatım033" 
+                        data-bs-toggle="list" role="tab" aria-controls="anlatım033-listesi">
+                            Ayarlar Devam
+                        </a>
+                        <a href="#anlatım0333-listesi"  class="list-group-item list-group-item-action" id="anlatım0333" 
+                        data-bs-toggle="list" role="tab" aria-controls="anlatım0333-listesi">
+                            Ayarlar Devam
+                        </a>
+                        <a href="#anlatım03333-listesi"  class="list-group-item list-group-item-action" id="anlatım03333" 
+                        data-bs-toggle="list" role="tab" aria-controls="anlatım03333-listesi">
+                            ayarlar son
+                        </a>
+                </div>
+                
+        </div>
+        <div class="col-8">
+            <div class="tab-content" id="tabcontent">
+                <div class="tab-pane fade show active" id="görünüm3-listesi" role="tabpanel"
+                aria-labelledby="görünüm3">
+                <div class="card">
+                    yukarıya localhost/phpmyadmin/ yazarak xammp ile veri tabanına giriyoruz. ve sol tarafta yeni yazan yere tıklayıp yeni veri tabanı oluşturabiliriz <img src="https://imgyukle.com/f/2022/12/21/JGpEgM.png"/>ı ismi seçip yanına utf8_general_ci seçin.veritabanımıza tıklayıp ayarlar isimli bir tablo oluşturalım.<img src="https://imgyukle.com/f/2022/12/21/JGpnEn.png" alt="">
+                   
+                  </div>
+                </div>    
+                <div class="tab-pane fade show" id="anlatım3-listesi" role="tabpanel"
+                    aria-labelledby="anlatım3">
+                      ayarlar.php Dosyası oluşturalım <img src="https://imgyukle.com/f/2022/12/21/JGpubA.png" alt=""> ayarlar kısmını bu şekilde oluşturdum.
+                        </div>
+                        <div class="tab-pane fade show" id="anlatım03-listesi" role="tabpanel"
+                    aria-labelledby="anlatım03">
+                     işlemler isimli bir dosya oluşturdum ve içine islem.php dosyası oluşturdum 
+                     <img src="https://imgyukle.com/f/2022/12/21/JGpN7s.png" alt=""> ve islem.php dosyasının içine standart olan bu kodu yazdım.
+
+                        </div>
+                        <div class="tab-pane fade show" id="anlatım033-listesi" role="tabpanel"
+                    aria-labelledby="anlatım033">
+                     header ve footer ı php ile ayarlar.php ye aktaralım footer sonuna ve header'i başa koydum. vesql den veri çekmek için kodarımı yazdım.ayarla.php dosyasındaki place holderları silip yerine value yazdım varsayılan değer  
+                     <img src="https://imgyukle.com/f/2022/12/21/JGDJte.png" alt="">  
+                     echo sitebasliği aynısını koypalayıp header.php de title 'ın arasına yapıştırdım.
+
+                        </div>
+                        <div class="tab-pane fade show" id="anlatım0333-listesi" role="tabpanel"
+                    aria-labelledby="anlatım0333">
+                     İslemler dosyasının altına islem.php dosyası ekledim ve ayarlar.php de valuelerin içinde site_baslik site_acıklama site_sahip leri name lerin içine yazdım.ve butona name verip ayarkaydetme yapalım.ve islem.php dosyasına kodlarımı ekledim ve veri gönderip çekebileceğiz.
+<img src="https://imgyukle.com/f/2022/12/21/JGDBSH.png" alt="">
+                        </div>
+                        <div class="tab-pane fade show" id="anlatım03333-listesi" role="tabpanel"
+                    aria-labelledby="anlatım03333">
+                     ayarlar.php dosyamızın son hali.
+<img src="https://resmim.net/cdn/2022/12/21/JrFs6.png" alt="">
+                        </div>
+                        
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="card container my-2 p-3">
+    <div class="card-header">
+    Oturum Açma
+    </div>
+    <div class="container container my-2 p-3">
+        <div class="row">
+            <div class="col-4">
+                    <div class="list-group" id="myTablist" role="tablist">
+                        <a href="#görünüm5-listesi"  class="list-group-item list-group-item-action active" id="görünüm5" 
+                        data-bs-toggle="list" role="tab" aria-controls="görünüm5-listesi">
+                            Anlatım
+                        </a>
+                        <a href="#kod5-listesi"  class="list-group-item list-group-item-action" id="kod5" 
+                        data-bs-toggle="list" role="tab" aria-controls="kod5-listesi">
+                            Giriş.php
+                        </a>
+                        <a href="#kod52-listesi"  class="list-group-item list-group-item-action" id="kod52" 
+                        data-bs-toggle="list" role="tab" aria-controls="kod52-listesi">
+                            Giriş.php ek
+                        </a>
+                        <a href="#anlatım5-listesi"  class="list-group-item list-group-item-action" id="anlatım5" 
+                        data-bs-toggle="list" role="tab" aria-controls="anlatım5-listesi">
+                            Giriş.php Sql e bağlama
+                        </a>
+                        <a href="#anlatım05-listesi"  class="list-group-item list-group-item-action" id="anlatım05" 
+                        data-bs-toggle="list" role="tab" aria-controls="anlatım05-listesi">
+                           Oturum gücenliği
+                        </a>
+                        <a href="#anlatım005-listesi"  class="list-group-item list-group-item-action" id="anlatım005" 
+                        data-bs-toggle="list" role="tab" aria-controls="anlatım005-listesi">
+                            Oturum Güvenliği ek
+                        </a>
+                    </div>
+                    
+            </div>
+            <div class="col-8">
+                <div class="tab-content" id="tabcontent">
+                    <div class="tab-pane fade show active" id="görünüm5-listesi" role="tabpanel"
+                    aria-labelledby="görünüm5">
+                    Sql dosyamızın içine gelip kullanicilar isminde yeni bir tablo oluşturdum.
+                    <img src="https://resmim.net/cdn/2022/12/21/JrvIk.png" alt="">
+
+                    </div>    
+                    <div class="tab-pane fade show" id="kod5-listesi" role="tabpanel"
+                        aria-labelledby="kod5">
+                            açılış sayfasını irternetten aldım sizde kod içeriğinden alabilirsiniz kodları bırakıyorum.
+                            <img src="https://resmim.net/cdn/2022/12/21/JyfQC.png" alt="">    
+                    </div> 
+                    <div class="tab-pane fade show" id="kod52-listesi" role="tabpanel"
+                        aria-labelledby="kod52">
+                                     <img src="https://resmim.net/cdn/2022/12/21/JyWqG.png" alt="">               
+                    </div> 
+                    <div class="tab-pane fade show" id="anlatım5-listesi" role="tabpanel"
+                    aria-labelledby="anlatım5">
+                        giriş.php dosyasını sql e bağladım.
+<img src="https://resmim.net/cdn/2022/12/21/JyDd1.png" alt="">
+                        </div>
+                        <div class="tab-pane fade show" id="anlatım05-listesi" role="tabpanel"
+                    aria-labelledby="anlatım05">
+                        eğer kullanıcı oturum açmamışsa panelimize girmeyek ve giriş sayfasına tekrar dönecek.
+                        sayfa basına bir session oluşturucaz çalışması içinde ob_start ekliyoruz 
+<img src="https://resmim.net/cdn/2022/12/21/Jylz3.png" alt="">
+                        </div>
+                        <div class="tab-pane fade show" id="anlatım005-listesi" role="tabpanel"
+                    aria-labelledby="anlatım005">
+                    headerimizin içine geri kalan kodlarımızı ekliyoruz.
+                    <img src="https://resmim.net/cdn/2022/12/21/JyCIh.png" alt="">
+                        
+
+
+                        </div>
+                        
+                </div>
+            </div>
+        </div>
+    </div> 
+</div>
+
+
+<div class="card container my-2 p-3">
+    <div class="card-header">
+    Proje Ekleme
+    </div>
+<div class="container container my-2 p-3">
+    <div class="row">
+        <div class="col-4">
+           <div class="list-group" id="myTablist" role="tablist">
+                <a href="#görünüm6-listesi"  class="list-group-item list-group-item-action active" id="görünüm6" 
+                data-bs-toggle="list" role="tab" aria-controls="görünüm6-listesi">
+                    Proje EKleme
+                </a>
+                <a href="#kod6-listesi"  class="list-group-item list-group-item-action" id="kod6" 
+                data-bs-toggle="list" role="tab" aria-controls="kod6-listesi">
+                    Proje Ekleme ek
+                </a>
+                <a href="#anlatım6-listesi"  class="list-group-item list-group-item-action" id="anlatım6" 
+                    data-bs-toggle="list" role="tab" aria-controls="anlatım6-listesi">
+                        Proje EKleme sql 
+                    </a>
+                    <a href="#anlatım06-listesi"  class="list-group-item list-group-item-action" id="anlatım06" 
+                    data-bs-toggle="list" role="tab" aria-controls="anlatım06-listesi">
+                        Proje EKleme islem.php
+                    </a>
+            </div>
+            
+    </div>
+    <div class="col-8">
+        <div class="tab-content" id="tabcontent">
+            <div class="tab-pane fade show active" id="görünüm6-listesi" role="tabpanel"
+            aria-labelledby="görünüm6">
+            <div class="card">
+                
+                           projeekle.php dosyası oluşturdum ve içeriğini düzenledim.
+
+                           <img src="https://resmim.net/cdn/2022/12/21/Jy8i7.png" alt="">
+          
+              </div>
+            </div>    
+            <div class="tab-pane fade show" id="kod6-listesi" role="tabpanel"
+                aria-labelledby="kod6">
+                Kodun devamı. 
+                <img src="https://resmim.net/cdn/2022/12/21/JyYXc.png" alt="">
+                 
+            </div> 
+            <div class="tab-pane fade show" id="anlatım6-listesi" role="tabpanel"
+                aria-labelledby="anlatım6">
+                proje isimli bir tablo oluşturdum.
+                <img src="https://resmim.net/cdn/2022/12/21/JybyR.png" alt="">
+                    </div>
+                    <div class="tab-pane fade show" id="anlatım06-listesi" role="tabpanel"
+                aria-labelledby="anlatım06">
+                islem.php de slq bağlantımızı yaptım.
+                <img src="https://resmim.net/cdn/2022/12/21/JyeJj.png" alt="">
+                    </div>
+            </div>
+        </div>
+    </div>
+</div>
+</div>
+<div class="card container my-2 p-3">
+    <div class="card-header">
+    Projeler ve proje.php Oluşturma
+    </div>
+<div class="container container my-2 p-3">
+    <div class="row">
+        <div class="col-4">
+           <div class="list-group" id="myTablist" role="tablist">
+                <a href="#görünüm7-listesi"  class="list-group-item list-group-item-action active" id="görünüm7" 
+                data-bs-toggle="list" role="tab" aria-controls="görünüm7-listesi">
+                    Projeler.php 
+                </a>
+                <a href="#kod7-listesi"  class="list-group-item list-group-item-action" id="kod7" 
+                data-bs-toggle="list" role="tab" aria-controls="kod7-listesi">
+                    Projeler.php ek
+                </a>
+                <a href="#kod07-listesi"  class="list-group-item list-group-item-action" id="kod07" 
+                data-bs-toggle="list" role="tab" aria-controls="kod07-listesi">
+                    Projeler.php ek
+                </a>
+                <a href="#kod07-listesi"  class="list-group-item list-group-item-action" id="kod07" 
+                data-bs-toggle="list" role="tab" aria-controls="kod07-listesi">
+                    Projeler.php ek
+                </a>
+                <a href="#kod017-listesi"  class="list-group-item list-group-item-action" id="kod017" 
+                data-bs-toggle="list" role="tab" aria-controls="kod017-listesi">
+                    Projeler.php ek
+                </a>
+                <a href="#kod0127-listesi"  class="list-group-item list-group-item-action" id="kod0127" 
+                data-bs-toggle="list" role="tab" aria-controls="kod0127-listesi">
+                    Projeler.php ek
+                </a>
+                <a href="#kod01237-listesi"  class="list-group-item list-group-item-action" id="kod01237" 
+                data-bs-toggle="list" role="tab" aria-controls="kod01237-listesi">
+                    Projeler.php ek
+                </a>
+                <a href="#kod012347-listesi"  class="list-group-item list-group-item-action" id="kod012347" 
+                data-bs-toggle="list" role="tab" aria-controls="kod012347-listesi">
+                    Projeler.php ek
+                </a>
+                <a href="#anlatımq-listesi"  class="list-group-item list-group-item-action" id="anlatımq" 
+                    data-bs-toggle="list" role="tab" aria-controls="anlatımq-listesi">
+                        Anlatım
+                    </a>
+            </div>
+            
+    </div>
+    <div class="col-8">
+        <div class="tab-content" id="tabcontent">
+            <div class="tab-pane fade show active" id="görünüm7-listesi" role="tabpanel"
+            aria-labelledby="görünüm7">
+            <div class="card">
+                projeler.php adlı bir dosya oluşturdum ve içini doldurdum. ve islem.php dosyası için kodları yazdıyorum ve div ve tablo ile görünümünü yaptım. içine while döngüsü koydum ve kaç satır varsa o kadar dönecek. 
+                <img src="https://resmim.net/cdn/2022/12/21/JyF2Q.png" alt="">
+                
+
+              </div>
+            </div>    
+            <div class="tab-pane fade show" id="kod7-listesi" role="tabpanel"
+                aria-labelledby="kod7">
+            filtreleme butonlarının kodlarını benim dosyamdan alınız hazır bulup kullandığım kodlardır.
+<img src="https://resmim.net/cdn/2022/12/21/Jyql3.png" alt="">
+
+            </div> 
+            <div class="tab-pane fade show" id="kod07-listesi" role="tabpanel"
+                aria-labelledby="kod07">
+            <img src="https://resmim.net/cdn/2022/12/21/Jyz4q.png" alt="">
+
+
+            </div> 
+            <div class="tab-pane fade show" id="kod017-listesi" role="tabpanel"
+                aria-labelledby="kod017">
+            <img src="https://resmim.net/cdn/2022/12/21/J0MwH.png" alt="">
+
+
+            </div> 
+            <div class="tab-pane fade show" id="kod0127-listesi" role="tabpanel"
+                aria-labelledby="kod0127">
+            <img src="https://resmim.net/cdn/2022/12/21/J0S0c.png" alt="">
+
+
+            </div> 
+            <div class="tab-pane fade show" id="kod01237-listesi" role="tabpanel"
+                aria-labelledby="kod01237">
+            <img src="https://resmim.net/cdn/2022/12/21/J0ZLR.png" alt="">
+
+
+            </div> 
+            <div class="tab-pane fade show" id="kod012347-listesi" role="tabpanel"
+                aria-labelledby="kod012347">
+            <img src="https://resmim.net/cdn/2022/12/21/J0Wmj.png" alt="">
+
+
+            </div> 
+            <div class="tab-pane fade show" id="kod0123457-listesi" role="tabpanel"
+                aria-labelledby="kod0123457">
+            <img src="https://resmim.net/cdn/2022/12/21/J0mYn.png" alt="">
+
+
+            </div> 
+            
+            <div class="tab-pane fade show" id="anlatımq-listesi" role="tabpanel"
+                aria-labelledby="anlatımq">
+                 projeler sayfası oluşturduk ve slq den projeleri çekip projeler sayfasında görüntüledim.
+                 hazır kodlar üst butonları içerir ve sitenin güzelleşmesini sağladı. şimdi siparişleri görüntelebiliyorum.
+
+                    </div>
+            </div>
+        </div>
+    </div>
+</div>
+</div>
+<div class="card container my-2 p-3">
+    <div class="card-header">
+    Proje Düzenleme
+    </div>
+<div class="container container my-2 p-3">
+    <div class="row">
+        <div class="col-4">
+           <div class="list-group" id="myTablist" role="tablist">
+                <a href="#görünüm4-listesi"  class="list-group-item list-group-item-action active" id="görünüm4" 
+                data-bs-toggle="list" role="tab" aria-controls="görünüm4-listesi">
+                    Proje Düzenleme.php
+                </a>
+                <a href="#görünüm04-listesi"  class="list-group-item list-group-item-action active" id="görünüm04" 
+                data-bs-toggle="list" role="tab" aria-controls="görünüm04-listesi">
+                    Proje Düzenleme.php ek
+                </a>
+                <a href="#görünüm014-listesi"  class="list-group-item list-group-item-action active" id="görünüm014" 
+                data-bs-toggle="list" role="tab" aria-controls="görünüm014-listesi">
+                    Proje Düzenleme sql
+                </a>
+            </div>
+            
+    </div>
+    <div class="col-8">
+        <div class="tab-content" id="tabcontent">
+            <div class="tab-pane fade show active" id="görünüm4-listesi" role="tabpanel"
+            aria-labelledby="görünüm4">
+            şimdi projeekle.php nin aynısını kopyalayın proje düzenlemeye girince aynı ekran gibi görünmesi
+            daha kolaylık sağlar. öncelikle placeholder yerlerine value ile değiştirdim. bir if açıp isset $_POST['proje_id'] ve projelerden verileri almak için kodları yazıyorum.
+            <img src="https://resmim.net/cdn/2022/12/21/J0Ew6.png" alt="">
+            </div>    
+            <div class="tab-pane fade show active" id="görünüm04-listesi" role="tabpanel"
+            aria-labelledby="görünüm04">
+            <img src="https://resmim.net/cdn/2022/12/21/J0lmx.png" alt="">
+            </div> 
+            <div class="tab-pane fade show active" id="görünüm014-listesi" role="tabpanel"
+            aria-labelledby="görünüm014">
+           projelerin islem.php klasöründeki sql den veri gönderip veri çekmesi için kodlarımı yazdım.
+            <img src="https://resmim.net/cdn/2022/12/21/J03bk.png" alt="">
+
+
+            </div> 
+           
+            
+            </div>
+        </div>
+    </div>
+</div>
+</div>
+<div class="card container my-2 p-3">
+    <div class="card-header">
+    Proje Silme
+    </div>
+<div class="container container my-2 p-3">
+    <div class="row">
+        <div class="col-4">
+           <div class="list-group" id="myTablist" role="tablist">
+                <a href="#anlatım8-listesi"  class="list-group-item list-group-item-action" id="anlatım8" 
+                    data-bs-toggle="list" role="tab" aria-controls="anlatım8-listesi">
+                        Anlatım
+                    </a>
+            </div>
+            
+            </div>
+            <div class="tab-pane fade show" id="anlatım8-listesi" role="tabpanel"
+                aria-labelledby="anlatım8">
+                Projeleri silmek için islem.php klasörüne glip sql ile bağlantısını kurdum ve siparisler.php içinden önceden vermiş olduğum name i aldım.
+                <img src="https://resmim.net/cdn/2022/12/21/J0g6F.png" alt="">
+                    </div>
+            </div>
+        </div>
+    </div>
+
+
+    
+    
+
+    <div class="card container my-2 p-3">
+        <div class="card-header">
+        Sipariş Ekleme Sayfası
+        </div>
+        <div class="container container my-2 p-3">
+            <div class="row">
+                <div class="col-4">
+                        <div class="list-group" id="myTablist" role="tablist">
+                            <a href="#görünüm88-listesi"  class="list-group-item list-group-item-action active" id="görünüm88" 
+                            data-bs-toggle="list" role="tab" aria-controls="görünüm88-listesi">
+                            Siparis Ekleme.php
+                            </a>
+                            <a href="#kod88-listesi"  class="list-group-item list-group-item-action" id="kod88" 
+                            data-bs-toggle="list" role="tab" aria-controls="kod88-listesi">
+                            Siparis Ekleme.php ek
+                            </a>
+                            <a href="#anlatım88-listesi"  class="list-group-item list-group-item-action" id="anlatım88" 
+                            data-bs-toggle="list" role="tab" aria-controls="anlatım88-listesi">
+                            Sipariş Ekleme İslem.php
+                            </a>
+                            <a href="#anlatım088-listesi"  class="list-group-item list-group-item-action" id="anlatım088" 
+                            data-bs-toggle="list" role="tab" aria-controls="anlatım088-listesi">
+                            Sipariş Ekleme İslem.php
+                            </a>
+                            
+                        </div>
+                        
+                </div>
+                <div class="col-8">
+                    <div class="tab-content" id="tabcontent">
+                        <div class="tab-pane fade show active" id="görünüm88-listesi" role="tabpanel"
+                        aria-labelledby="görünüm88">
+                            <div class="card" style="width: 18rem;">
+                                header ve footer'ı sayfama ekledim ve divler ve formlar ile sayfamı şekillendiriyorum. geri kalanı projeekle.php den alıyorum çünkü geri kalanı aynı.
+                                <img src="https://resmim.net/cdn/2022/12/21/J0K3C.png" alt="">
+                            </div>   
+                        </div>    
+                        <div class="tab-pane fade show" id="kod88-listesi" role="tabpanel"
+                            aria-labelledby="kod88">
+                            <img src="https://resmim.net/cdn/2022/12/21/J0bp1.png" alt="">
+
+                        </div> 
+                        <div class="tab-pane fade show" id="anlatım88-listesi" role="tabpanel"
+                            aria-labelledby="anlatım88">
+                            <img src="https://resmim.net/cdn/2022/12/21/J0oCT.png" alt="">
+
+                        </div> 
+                        <div class="tab-pane fade show" id="anlatım088-listesi" role="tabpanel"
+                            aria-labelledby="anlatım088">
+                            localhost/MySqladmin e gelip yeni bir tablo oluşturdum ismini siparis verdim. ve içeriğini oluşturdum.
+                      <img src="https://resmim.net/cdn/2022/12/21/J08vi.png" alt="">
+
+                        </div> 
+                    </div>
+                    </div>
+                </div>
+            </div>
+        </div> 
+</div>
+
+
+
+
+    
+
+
+<div class="card container my-2 p-3">
+    <div class="card-header">
+    Siparişler Sayfası Oluşturma
+    </div>
+<div class="container container my-2 p-3">
+    <div class="row">
+        <div class="col-4">
+           <div class="list-group" id="myTablist" role="tablist">
+                <a href="#görünüm9-listesi"  class="list-group-item list-group-item-action active" id="görünüm9" 
+                data-bs-toggle="list" role="tab" aria-controls="görünüm9-listesi">
+                    Siparişler Sayfası
+                </a>
+                <a href="#kod9-listesi"  class="list-group-item list-group-item-action" id="kod9" 
+                data-bs-toggle="list" role="tab" aria-controls="kod9-listesi">
+                    Siparişler Sayfası ek
+                </a>
+                <a href="#anlatım9-listesi"  class="list-group-item list-group-item-action" id="anlatım9" 
+                    data-bs-toggle="list" role="tab" aria-controls="anlatım9-listesi">
+                    Siparişler Sayfası ek
+                    </a>
+                    <a href="#anlatım09-listesi"  class="list-group-item list-group-item-action" id="anlatım09" 
+                    data-bs-toggle="list" role="tab" aria-controls="anlatım09-listesi">
+                    Siparişler Sayfası ek
+                    </a>
+                    <a href="#anlatım019-listesi"  class="list-group-item list-group-item-action" id="anlatım019" 
+                    data-bs-toggle="list" role="tab" aria-controls="anlatım019-listesi">
+                    Siparişler Sayfası ek
+                    </a>
+                    <a href="#anlatım0129-listesi"  class="list-group-item list-group-item-action" id="anlatım0129" 
+                    data-bs-toggle="list" role="tab" aria-controls="anlatım0129-listesi">
+                    Siparişler Sayfası ek
+                    </a>
+                    <a href="#anlatım01239-listesi"  class="list-group-item list-group-item-action" id="anlatım01239" 
+                    data-bs-toggle="list" role="tab" aria-controls="anlatım01239-listesi">
+                    Siparişler Sayfası ek
+                    </a>
+                    <a href="#anlatım012349-listesi"  class="list-group-item list-group-item-action" id="anlatım012349" 
+                    data-bs-toggle="list" role="tab" aria-controls="anlatım012349-listesi">
+                    Siparişler Sayfası ek
+                    </a>
+            </div>
+            
+    </div>
+    <div class="col-8">
+        <div class="tab-content" id="tabcontent">
+            <div class="tab-pane fade show active" id="görünüm9-listesi" role="tabpanel"
+            aria-labelledby="görünüm9">
+            Siparişler sayfasını yaparken projeler sayfasıyla birebir olacağı için projeler.php sayfasını birebir kopyalayıp yapıştırabilirsiniz sadece projeler kelimelerinin yerinin siparişler ile değiştirin.
+            <img src="https://resmim.net/cdn/2022/12/21/J0JMy.png" alt="">
+
+            </div>    
+            <div class="tab-pane fade show" id="kod9-listesi" role="tabpanel"
+                aria-labelledby="kod9">
+            <img src="https://resmim.net/cdn/2022/12/21/J0LgD.png" alt="">
+
+
+            </div> 
+            <div class="tab-pane fade show" id="anlatım9-listesi" role="tabpanel"
+                aria-labelledby="anlatım9">
+                  <img src="https://resmim.net/cdn/2022/12/21/J0PtI.png" alt="">
+
+
+                    </div>
+                    <div class="tab-pane fade show" id="anlatım09-listesi" role="tabpanel"
+                aria-labelledby="anlatım09">
+                  <img src="https://resmim.net/cdn/2022/12/21/J0nFb.png" alt="">
+
+
+                    </div>
+                    <div class="tab-pane fade show" id="anlatım019-listesi" role="tabpanel"
+                aria-labelledby="anlatım019">
+                  <img src="https://resmim.net/cdn/2022/12/21/J0GEZ.png" alt="">
+
+
+                    </div>
+                    <div class="tab-pane fade show" id="anlatım0129-listesi" role="tabpanel"
+                aria-labelledby="anlatım0129">
+                  <img src="https://resmim.net/cdn/2022/12/21/J0a56.png" alt="">
+
+
+                    </div>
+                    <div class="tab-pane fade show" id="anlatım01239-listesi" role="tabpanel"
+                aria-labelledby="anlatım01239">
+                  <img src="https://resmim.net/cdn/2022/12/21/J0FD2.png" alt="">
+
+
+                    </div>
+                    <div class="tab-pane fade show" id="anlatım012349-listesi" role="tabpanel"
+                aria-labelledby="anlatım012349">
+                  <img src="https://resmim.net/cdn/2022/12/21/J0Uex.png" alt="">
+
+
+                    </div>
+            </div>
+        </div>
+    </div>
+</div>
+</div>
+<div class="card container my-2 p-3">
+    <div class="card-header">
+    Sipariş düzenleme Sayfası Oluşturma
+    </div>
+<div class="container container my-2 p-3">
+    <div class="row">
+        <div class="col-4">
+           <div class="list-group" id="myTablist" role="tablist">
+                <a href="#görünüm10-listesi"  class="list-group-item list-group-item-action active" id="görünüm10" 
+                data-bs-toggle="list" role="tab" aria-controls="görünüm10-listesi">
+                    Sipariş düzenleme Sayfası
+                </a>
+                <a href="#kod10-listesi"  class="list-group-item list-group-item-action" id="kod10" 
+                data-bs-toggle="list" role="tab" aria-controls="kod10-listesi">
+                    Sipariş düzenleme Sayfası ek
+                </a>
+                
+            </div>
+            
+    </div>
+    <div class="col-8">
+        <div class="tab-content" id="tabcontent">
+            <div class="tab-pane fade show active" id="görünüm10-listesi" role="tabpanel"
+            aria-labelledby="görünüm10">
+            Sipaarişekle.php sayfasındaki kodları kopyalayıp yapıştırdım ve placeholder'ları value ile değiştirdim.
+            ve en başa islem.php ile bağlantısı olması için sql kodlarımızı yazıyorum.
+            <img src="https://resmim.net/cdn/2022/12/21/J1wSK.png" alt="">
+
+            </div>    
+            <div class="tab-pane fade show" id="kod10-listesi" role="tabpanel"
+                aria-labelledby="kod10">
+            <img src="https://resmim.net/cdn/2022/12/21/J1C8M.png" alt="">
+
+
+            </div> 
+            
+            </div>
+        </div>
+    </div>
+</div>
+</div>
+
+<div class="card container my-2 p-3">
+    <div class="card-header">
+    Sipariş Silme
+    </div>
+<div class="container container my-2 p-3">
+    <div class="row">
+        <div class="col-4">
+           <div class="list-group" id="myTablist" role="tablist">
+                <a href="#görünüm100-listesi"  class="list-group-item list-group-item-action active" id="görünüm100" 
+                data-bs-toggle="list" role="tab" aria-controls="görünüm100-listesi">
+                    Sipariş silme
+                </a>
+                
+                
+            </div>
+            
+    </div>
+    <div class="col-8">
+        <div class="tab-content" id="tabcontent">
+            <div class="tab-pane fade show active" id="görünüm100-listesi" role="tabpanel"
+            aria-labelledby="görünüm100">
+            Siparişsilme için islem.php ye sql ile bağlantı kuracak sql kodlarımızı yazdım.
+<img src="https://resmim.net/cdn/2022/12/21/J1kEq.png" alt="">
+            </div>    
+            
+            
+            </div>
+        </div>
+    </div>
+</div>
+</div>
+
+
+
+
+
+
+
+<div class="card container my-2 p-3">
+    <div class="card-header">
+    İçerik Ayarları
+    </div>
+<div class="container container my-2 p-3">
+    <div class="row">
+        <div class="col-4">
+           <div class="list-group" id="myTablist" role="tablist">
+                <a href="#görünüm12-listesi"  class="list-group-item list-group-item-action active" id="görünüm12" 
+                data-bs-toggle="list" role="tab" aria-controls="görünüm12-listesi">
+                   Header.php ayarları
+                </a>
+                <a href="#kod12-listesi"  class="list-group-item list-group-item-action" id="kod12" 
+                data-bs-toggle="list" role="tab" aria-controls="kod12-listesi">
+                Header.php ayarları ek
+                </a>
+                <a href="#anlatım12-listesi"  class="list-group-item list-group-item-action" id="anlatım12" 
+                    data-bs-toggle="list" role="tab" aria-controls="anlatım12-listesi">
+                    Header.php ayarları ek
+                    </a>
+                    <a href="#anlatım012-listesi"  class="list-group-item list-group-item-action" id="anlatım012" 
+                    data-bs-toggle="list" role="tab" aria-controls="anlatım012-listesi">
+                    Header.php ayarları ek
+                    </a>
+                    <a href="#anlatım0112-listesi"  class="list-group-item list-group-item-action" id="anlatım0112" 
+                    data-bs-toggle="list" role="tab" aria-controls="anlatım0112-listesi">
+                    Çıkış
+                    </a>
+                    
+            </div>
+            
+    </div>
+    <div class="col-8">
+        <div class="tab-content" id="tabcontent">
+            <div class="tab-pane fade show active" id="görünüm12-listesi" role="tabpanel"
+            aria-labelledby="görünüm12">
+            Ana sayfamızın görüntüsü için header.php de ayarlarla oynadım ve ingilizce metinleri türkçeye çevirdim ve kendime göre silme işlemleri yaptım. ve dosya yollarını yarladım. sizde bunları basit bir şekilde yapabilirsiniz.
+            <img src="https://resmim.net/cdn/2022/12/21/J11sZ.png" alt="">
+
+            </div>    
+            <div class="tab-pane fade show" id="kod12-listesi" role="tabpanel"
+                aria-labelledby="kod12">
+            <img src="https://resmim.net/cdn/2022/12/21/J1596.png" alt="">
+
+
+            </div> 
+            <div class="tab-pane fade show" id="anlatım12-listesi" role="tabpanel"
+                aria-labelledby="anlatım12">
+                  <img src="https://resmim.net/cdn/2022/12/21/J1sT8.png" alt="">
+
+
+                    </div>
+                    <div class="tab-pane fade show" id="anlatım012-listesi" role="tabpanel"
+                aria-labelledby="anlatım012">
+                  <img src="https://resmim.net/cdn/2022/12/21/J1io2.png" alt="">
+
+
+                    </div>
+                    <div class="tab-pane fade show" id="anlatım0112-listesi" role="tabpanel"
+                aria-labelledby="anlatım0112">
+                session islemlerini kullanabilmek için seesion start bir altına gelip session_destroy kullanarak daha önce oluşturduğumuz sessionları iptal ediyoruz. ve oturum işlemlerini sonlandırıyoruz.
+                  <img src="https://resmim.net/cdn/2022/12/21/J14Ax.png" alt="">
+
+
+                    </div>
+                    
+            </div>
+        </div>
+    </div>
+</div>
+</div>
+
+
+
+
+
+
+<div class="card container my-2 p-3">
+    <div class="card-header">
+    Ana Sayfa Düzenleme
+    </div>
+<div class="container container my-2 p-3">
+    <div class="row">
+        <div class="col-4">
+           <div class="list-group" id="myTablist" role="tablist">
+                <a href="#görünüm13-listesi"  class="list-group-item list-group-item-action active" id="görünüm13" 
+                data-bs-toggle="list" role="tab" aria-controls="görünüm13-listesi">
+                    Ana Sayfa Düzenleme
+                </a>
+                <a href="#kod13-listesi"  class="list-group-item list-group-item-action" id="kod13" 
+                data-bs-toggle="list" role="tab" aria-controls="kod13-listesi">
+                Ana Sayfa Düzenleme ek
+                </a>
+                <a href="#anlatım13-listesi"  class="list-group-item list-group-item-action" id="anlatım13" 
+                    data-bs-toggle="list" role="tab" aria-controls="anlatım13-listesi">
+                    Ana Sayfa Düzenleme ek
+                    </a>
+                    <a href="#anlatım013-listesi"  class="list-group-item list-group-item-action" id="anlatım013" 
+                    data-bs-toggle="list" role="tab" aria-controls="anlatım013-listesi">
+                    Ana Sayfa Düzenleme ek
+                    </a>
+                    <a href="#anlatım0113-listesi"  class="list-group-item list-group-item-action" id="anlatım0113" 
+                    data-bs-toggle="list" role="tab" aria-controls="anlatım0113-listesi">
+                    Ana Sayfa Düzenleme ek
+                    </a>
+                    <a href="#anlatım01213-listesi"  class="list-group-item list-group-item-action" id="anlatım01213" 
+                    data-bs-toggle="list" role="tab" aria-controls="anlatım01213-listesi">
+                    Ana Sayfa Düzenleme ek
+                    </a>
+                    <a href="#anlatım012313-listesi"  class="list-group-item list-group-item-action" id="anlatım012313" 
+                    data-bs-toggle="list" role="tab" aria-controls="anlatım012313-listesi">
+                    Ana Sayfa Düzenleme ek
+                    </a>
+                    <a href="#anlatım0123413-listesi"  class="list-group-item list-group-item-action" id="anlatım0123413" 
+                    data-bs-toggle="list" role="tab" aria-controls="anlatım0123413-listesi">
+                    Ana Sayfa Düzenleme ek
+                    </a>
+                    <a href="#anlatım01234513-listesi"  class="list-group-item list-group-item-action" id="anlatım01234513" 
+                    data-bs-toggle="list" role="tab" aria-controls="anlatım01234513-listesi">
+                    Ana Sayfa Düzenleme ek
+                    </a>
+                    <a href="#anlatım012345613-listesi"  class="list-group-item list-group-item-action" id="anlatım012345613" 
+                    data-bs-toggle="list" role="tab" aria-controls="anlatım012345613-listesi">
+                    Ana Sayfa Düzenleme ek
+                    </a>
+            </div>
+            
+    </div>
+    <div class="col-8">
+        <div class="tab-content" id="tabcontent">
+            <div class="tab-pane fade show active" id="görünüm13-listesi" role="tabpanel"
+            aria-labelledby="görünüm13">
+            Ana sayfamızdaki sildiğimiz kısımları yapıcam. kolaylık sağlayan siparişler ve projelerin kaç proje var kaç sipariş var biten proje biten sipariş leri gösteren  kartlarınını oluşturdum. ve sipariş ve projelerimi ana sayfada göstermek için Siparişler ve projeleri sayfama kopyaladım.
+<img src="https://resmim.net/cdn/2022/12/21/J1hGT.png" alt="">
+            </div>    
+            <div class="tab-pane fade show" id="kod13-listesi" role="tabpanel"
+                aria-labelledby="kod13">
+            <img src="https://resmim.net/cdn/2022/12/21/J1ITL.png" alt="">
+
+
+            </div> 
+            <div class="tab-pane fade show" id="anlatım13-listesi" role="tabpanel"
+                aria-labelledby="anlatım13">
+                  <img src="https://resmim.net/cdn/2022/12/21/J1Jro.png" alt="">
+
+
+                    </div>
+                    <div class="tab-pane fade show" id="anlatım013-listesi" role="tabpanel"
+                aria-labelledby="anlatım013">
+                  <img src="https://resmim.net/cdn/2022/12/21/J1LIW.png" alt="">
+
+
+                    </div>
+                    <div class="tab-pane fade show" id="anlatım0113-listesi" role="tabpanel"
+                aria-labelledby="anlatım0113">
+                  <img src="https://resmim.net/cdn/2022/12/21/J1nZh.png" alt="">
+
+
+                    </div>
+                    <div class="tab-pane fade show" id="anlatım01213-listesi" role="tabpanel"
+                aria-labelledby="anlatım01213">
+                  <img src="https://resmim.net/cdn/2022/12/21/J19BK.png" alt="">
+
+
+                    </div>
+                    <div class="tab-pane fade show" id="anlatım012313-listesi" role="tabpanel"
+                aria-labelledby="anlatım012313">
+                  <img src="https://resmim.net/cdn/2022/12/21/J1GQM.png" alt="">
+
+
+                    </div>
+                    <div class="tab-pane fade show" id="anlatım01234513-listesi" role="tabpanel"
+                aria-labelledby="anlatım01234513">
+                  <img src="https://resmim.net/cdn/2022/12/21/J1aqQ.png" alt="">
+
+
+                    </div>
+                    <div class="tab-pane fade show" id="anlatım012345613-listesi" role="tabpanel"
+                aria-labelledby="anlatım012345613">
+                  <img src="https://resmim.net/cdn/2022/12/21/J1pd3.png" alt="">
+
+
+                    </div>
+
+                    
+                    
+                    
+            </div>
+        </div>
+    </div>
+</div>
+</div>
+
+
+
+
+
+
+
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+</body>
+</html>

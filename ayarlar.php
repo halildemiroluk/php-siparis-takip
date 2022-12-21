@@ -29,7 +29,7 @@
 					<input class="form-control" type="text" name="site_sahibi" value="<?php echo $ayarcek['site_sahibi']?>">
 					</div>
 				</div>
-				<button type="submit" class="btn btn-primary mt-2 name="ayarkaydet">Kaydet</button>
+				<button type="submit" class="btn btn-primary mt-2" name="ayarkaydet" >Kaydet</button>
 			</form>
 		</div>		
 	</div>

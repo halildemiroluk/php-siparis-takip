@@ -292,22 +292,22 @@ include'header.php'
     {
       extend: 'copyHtml5', 
       className: 'kopyalama-buton',
-      messageBottom: "Aksoyhlc İş Takip Sistemi Tarafından Üretilmiştir",
+      messageBottom: "HighTover İş Takip Sistemi Tarafından Üretilmiştir",
     },
     {
       extend: 'excelHtml5', 
       className: 'excel-buton',
-      messageBottom: "Aksoyhlc İş Takip Sistemi Tarafından Üretilmiştir",
+      messageBottom: "HighTover İş Takip Sistemi Tarafından Üretilmiştir",
     },
     {
      extend: 'pdfHtml5',
      className: 'pdf-buton',
-     messageBottom: "Aksoyhlc İş Takip Sistemi Tarafından Üretilmiştir",
+     messageBottom: "HighTover İş Takip Sistemi Tarafından Üretilmiştir",
    },
    {
     extend: 'csvHtml5',
     className: 'csv-buton',
-    messageBottom: "Aksoyhlc İş Takip Sistemi Tarafından Üretilmiştir",
+    messageBottom: "HighTover İş Takip Sistemi Tarafından Üretilmiştir",
   }
   ]
 });

@@ -61,10 +61,10 @@ session_start();
 
             <!-- Sidebar - Brand -->
             <a class="sidebar-brand d-flex align-items-center justify-content-center" href="index.html">
-                <div class="sidebar-brand-icon rotate-n-15">
-                    <i class="fas fa-laugh-wink"></i>
+                <div class="sidebar-brand-icon ">
+                   <img src="https://resmim.net/cdn/2022/12/21/JyVKF.jpg" height="60" width="60">
                 </div>
-                <div class="sidebar-brand-text mx-3">SB Admin <sup>2</sup></div>
+                <div class="sidebar-brand-text mx-3">HİGHTOVER TEKNOLOGİES <sup></sup></div>
             </a>
 
             <!-- Divider -->
